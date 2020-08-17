@@ -48,7 +48,7 @@ class Directory(override val parentPath: String, override val name: String, val 
 
   override def isDirectory: Boolean = true
 
-  override def ifFile: Boolean = false
+  override def isFile: Boolean = false
 }
 
 object Directory {

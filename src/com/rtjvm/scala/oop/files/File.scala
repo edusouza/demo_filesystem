@@ -1,6 +1,6 @@
 package com.rtjvm.scala.oop.files
 
-class File(override val parentPath: String, override val name: String, contents: String)
+class File(override val parentPath: String, override val name: String, val contents: String)
   extends DirEntry(parentPath, name) {
   def setContents(newContents: String): File =
     new File(parentPath, name, newContents)
@@ -19,7 +19,7 @@ class File(override val parentPath: String, override val name: String, contents:
 
   override def isDirectory: Boolean = false
 
-  override def ifFile: Boolean = true
+  override def isFile: Boolean = true
 }
 
 object File {
